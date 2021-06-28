@@ -1,0 +1,23 @@
+<div class="gateway-details">
+  <div class="card">
+    <div class="card-detail">
+      <mat-card>
+        <mat-card-title>
+          <h3>{{ activeGateway.name }}</h3>
+        </mat-card-title>
+        <mat-card-subtitle> <h4>Usn: {{ activeGateway.usn }}</h4></mat-card-subtitle>
+        <mat-card-content>
+          <p>Address: {{ activeGateway.address }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="action">
+      <button mat-raised-button color="primary" (click)="add()" style="margin-right: 10px;">Add Device</button>
+      <a routerLink="/home" mat-raised-button matTooltip="Back"><mat-icon>clear</mat-icon></a>
+    </div>
+  </div>
+  <div class="devices">
+    <app-device [deviceList]="deviceList" (deleteDevice)="onDeleteDevice($event)"></app-device>
+  </div>
+</div>
+

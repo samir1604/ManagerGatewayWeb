@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Add Gateway</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput autocomplete="off" [(ngModel)]="gateway.name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Ip Address</mat-label>
+    <input matInput autocomplete="off" [(ngModel)]="gateway.address">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="secondary" (click)="close()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="save()">Save</button>
+</div>
